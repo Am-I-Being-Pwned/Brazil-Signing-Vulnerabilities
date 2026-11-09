@@ -1,0 +1,12 @@
+# never commit compiled payloads
+*.dll
+*.bin
+# block vendor/native-host binaries by default...
+*.exe
+*.msi
+*.pdf
+# ...but DO ship the archived vulnerable extensions and the one native-host
+# installer we have, for reproducibility:
+!targets/**/extension/**
+!targets/**/*.crx
+!targets/06-certiplugin/native-host/Setup_CertiPlugin.exe
